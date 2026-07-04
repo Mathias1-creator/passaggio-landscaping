@@ -209,7 +209,7 @@ a { color: inherit; }
   padding: calc(var(--nav-height) + 40px) 20px 60px;
   background:
     linear-gradient(rgba(10, 10, 10, 0.62), rgba(10, 10, 10, 0.66)),
-    url("https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&w=2000&q=80")
+    url("https://images.unsplash.com/photo-1458245201577-fc8a130b8829?auto=format&fit=crop&w=2000&q=80")
     center / cover no-repeat;
   background-color: var(--bg-dark); /* fallback while photo loads */
 }
