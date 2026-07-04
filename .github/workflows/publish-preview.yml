@@ -1,0 +1,21 @@
+name: Publish preview to GitHub Pages
+
+# Mirrors the working branch to gh-pages on every push, so the
+# GitHub Pages preview URL always shows the latest version.
+on:
+  push:
+    branches:
+      - claude/paesaggio-landscape-site-kay9s8
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Mirror branch to gh-pages
+        run: git push origin HEAD:gh-pages --force
