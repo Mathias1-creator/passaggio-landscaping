@@ -622,6 +622,43 @@ a { color: inherit; }
 
 .contact-area { color: var(--text-muted); max-width: 36ch; }
 
+/* Capability statement download card */
+.capability-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 26px;
+  padding: 18px 20px;
+  max-width: 340px;
+  background: #222;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 3px solid var(--green);
+  border-radius: 4px;
+}
+
+.pdf-icon {
+  width: 42px; height: 42px;
+  color: var(--green-bright);
+  flex-shrink: 0;
+}
+
+.capability-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.capability-label {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.btn-sm {
+  padding: 9px 18px;
+  font-size: 0.8rem;
+}
+
 /* ============ Footer ============ */
 
 .site-footer {

@@ -36,7 +36,12 @@
   /* ---------- Smooth anchor scroll with fixed-nav offset ---------- */
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     link.addEventListener("click", function (event) {
-      var target = document.querySelector(link.getAttribute("href"));
+      var href = link.getAttribute("href");
+      if (href === "#") { // placeholder link (e.g. pending PDF) — do nothing
+        event.preventDefault();
+        return;
+      }
+      var target = document.querySelector(href);
       if (!target) return;
       event.preventDefault();
       setMenu(false); // close the mobile menu before scrolling
