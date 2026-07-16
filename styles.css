@@ -138,13 +138,11 @@ a { color: inherit; }
   text-decoration: none;
 }
 
-/* The logo is dark green as designed, so it sits on a small white plate */
+/* Client's full logo card, shown as-is */
 .brand-logo {
-  height: 44px;
+  height: 48px;
   width: auto;
   display: block;
-  background: #fff;
-  padding: 7px 12px;
   border-radius: 4px;
 }
 
@@ -645,10 +643,8 @@ a { color: inherit; }
 }
 
 .footer-logo {
-  height: 52px;
+  height: 72px;
   width: auto;
-  background: #fff;
-  padding: 8px 14px;
   border-radius: 4px;
 }
 
