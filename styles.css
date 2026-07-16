@@ -118,9 +118,10 @@ a { color: inherit; }
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease, transform 0.3s ease;
 }
 .site-nav.scrolled { background: rgba(18, 18, 18, 0.95); }
+.site-nav.nav-hidden { transform: translateY(-100%); }
 
 .nav-inner {
   max-width: 1200px;
@@ -707,6 +708,7 @@ html.js .reveal.visible {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .slider-track { transition: none; }
+  .site-nav { transition: none; }
 }
 
 /* ============================================================

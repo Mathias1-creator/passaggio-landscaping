@@ -10,11 +10,22 @@
 
   var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ---------- Sticky nav: darken slightly once scrolled ---------- */
+  /* ---------- Sticky nav: darken once scrolled; hide on scroll down,
+     reveal on scroll up ---------- */
   var nav = document.querySelector(".site-nav");
+  var lastScrollY = window.scrollY;
 
   function onScroll() {
-    nav.classList.toggle("scrolled", window.scrollY > 40);
+    var y = window.scrollY;
+    nav.classList.toggle("scrolled", y > 40);
+
+    var menuIsOpen = document.getElementById("nav-menu").classList.contains("open");
+    if (y > lastScrollY && y > nav.offsetHeight && !menuIsOpen) {
+      nav.classList.add("nav-hidden");   // scrolling down — tuck the header away
+    } else {
+      nav.classList.remove("nav-hidden"); // scrolling up or near the top — bring it back
+    }
+    lastScrollY = y;
   }
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
