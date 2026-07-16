@@ -7,9 +7,11 @@
   --bg-dark: #161616;
   --bg-darker: #1c1c1c;
   --bg-white: #ffffff;
-  --green: #2e7d32;
-  --green-hover: #256a29;
-  --green-bright: #43a047;   /* accent text on dark — higher contrast */
+  /* Brand greens sampled from the Paesaggio logo (#1d483f) */
+  --green: #1d483f;          /* solid surfaces: buttons, badges (white text: 9.6:1) */
+  --green-hover: #16382f;
+  --green-mid: #2e7565;      /* thin accents: bars, borders, ticks (3.3:1 on dark) */
+  --green-bright: #3fa18b;   /* accent text on dark (5.7:1) */
   --text-light: #f5f5f2;
   --text-muted: #b9b9b4;
   --text-dark: #1a1a1a;
@@ -133,21 +135,13 @@ a { color: inherit; }
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
   text-decoration: none;
-  color: var(--text-light);
 }
 
-.brand-mark {
-  width: 34px; height: 34px;
-  color: var(--green-bright);
-  flex-shrink: 0;
-}
-
-.brand-name {
-  font-size: 1.45rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
+.brand-logo {
+  height: 34px;
+  width: auto;
+  display: block;
 }
 
 /* Hamburger (mobile) */
@@ -216,32 +210,13 @@ a { color: inherit; }
 
 .hero-brand {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  margin-bottom: 28px;
+  justify-content: center;
+  margin-bottom: 34px;
 }
 
-.hero-mark {
-  width: 64px; height: 64px;
-  color: var(--green-bright);
-  margin-bottom: 10px;
-}
-
-.hero-wordmark {
-  font-size: 2.4rem;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  line-height: 1.1;
-}
-
-.hero-sub {
-  font-size: 0.95rem;
-  font-weight: 400;
-  letter-spacing: 0.5em;
-  text-indent: 0.5em; /* visually re-centers letter-spaced text */
-  text-transform: uppercase;
-  color: var(--text-muted);
+.hero-logo {
+  width: min(78vw, 400px);
+  height: auto;
 }
 
 .hero-tagline {
@@ -276,7 +251,7 @@ a { color: inherit; }
   display: block;
   width: 56px; height: 3px;
   margin-top: 12px;
-  background: var(--green);
+  background: var(--green-mid);
 }
 .section-head.centered { text-align: center; }
 .section-head.centered .head-bar { margin-left: auto; margin-right: auto; }
@@ -305,7 +280,7 @@ a { color: inherit; }
 .cred-tick {
   flex-shrink: 0;
   width: 10px; height: 10px;
-  background: var(--green);
+  background: var(--green-mid);
   transform: rotate(45deg); /* small diamond bullet, echoes the head bars */
 }
 
@@ -360,7 +335,7 @@ a { color: inherit; }
   font-size: 1.02rem;
   font-weight: 600;
   letter-spacing: 0.04em;
-  border-top: 3px solid var(--green);
+  border-top: 3px solid var(--green-mid);
 }
 
 .photo-card figcaption small {
@@ -385,7 +360,7 @@ a { color: inherit; }
   text-align: center;
   background: #222;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-top: 3px solid var(--green);
+  border-top: 3px solid var(--green-mid);
 }
 
 .pricing-card h3 {
@@ -488,7 +463,7 @@ a { color: inherit; }
   letter-spacing: 0.12em;
   color: #fff;
   background: rgba(10, 10, 10, 0.6);
-  border-left: 3px solid var(--green);
+  border-left: 3px solid var(--green-mid);
   white-space: nowrap;
 }
 
@@ -600,7 +575,7 @@ a { color: inherit; }
 .contact-email a {
   font-size: 1.05rem;
   color: var(--text-light);
-  text-decoration-color: var(--green);
+  text-decoration-color: var(--green-mid);
   text-underline-offset: 4px;
 }
 
@@ -632,7 +607,7 @@ a { color: inherit; }
   max-width: 340px;
   background: #222;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-left: 3px solid var(--green);
+  border-left: 3px solid var(--green-mid);
   border-radius: 4px;
 }
 
@@ -672,14 +647,14 @@ a { color: inherit; }
 
 .footer-brand {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 10px;
-  color: var(--text-light);
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
-.footer-brand .brand-mark { width: 28px; height: 28px; }
-.footer-brand .brand-name { font-size: 1.25rem; }
+
+.footer-logo {
+  height: 44px;
+  width: auto;
+}
 
 .footer-line { margin-bottom: 6px; }
 .footer-line a {
