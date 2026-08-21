@@ -269,6 +269,13 @@ a { color: inherit; }
 }
 .cred-list li:last-child { border-bottom: none; }
 
+.cred-note {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  max-width: 58ch;
+}
+
 .cred-tick {
   flex-shrink: 0;
   width: 10px; height: 10px;
@@ -416,6 +423,15 @@ a { color: inherit; }
   width: 26px; height: 26px;
   color: var(--green);
   flex-shrink: 0;
+}
+
+.badge-sub {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #4a4a46;
+  letter-spacing: 0.02em;
 }
 
 /* ============ Gallery slider ============ */
