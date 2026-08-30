@@ -252,6 +252,8 @@ a { color: inherit; }
 
 .about-grid { display: grid; gap: 36px; }
 
+.about-copy { max-width: 68ch; }
+
 .about-copy p {
   max-width: 62ch;
   color: var(--text-light);
@@ -283,35 +285,6 @@ a { color: inherit; }
   transform: rotate(45deg); /* small diamond bullet, echoes the head bars */
 }
 
-.video-placeholder {
-  position: relative;
-  aspect-ratio: 16 / 9;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  background: #262626;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.play-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 64px; height: 64px;
-  border-radius: 50%;
-  background: var(--green);
-  color: #fff;
-}
-.play-icon svg { width: 30px; height: 30px; margin-left: 3px; }
-
-.video-label {
-  font-size: 0.95rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-}
 
 /* ============ Photo cards (Clients & Services) ============ */
 
@@ -674,6 +647,21 @@ a { color: inherit; }
 
 .footer-emergency { color: var(--green-bright); font-weight: 500; }
 
+.footer-badges {
+  display: flex;
+  justify-content: center;
+  margin: 26px 0 4px;
+}
+
+/* Official SBA mark — shown unaltered, on its own light plate */
+.sba-badge {
+  height: 150px;
+  width: auto;
+  background: #fff;
+  padding: 8px;
+  border-radius: 4px;
+}
+
 .footer-copy { margin-top: 14px; font-size: 0.85rem; }
 
 /* ============ Sticky mobile call bar ============ */
@@ -757,12 +745,6 @@ html.js .reveal.visible {
 
   .card-grid { grid-template-columns: repeat(3, 1fr); }
   .pricing-grid { grid-template-columns: repeat(3, 1fr); }
-
-  .about-grid {
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 56px;
-  }
 
   .contact-grid {
     grid-template-columns: 1.1fr 1fr;
