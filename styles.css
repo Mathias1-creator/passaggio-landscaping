@@ -505,41 +505,10 @@ a { color: inherit; }
 
 .contact-grid { display: grid; gap: 44px; }
 
-.quote-form .field { margin-bottom: 18px; }
-
-.quote-form label {
-  display: block;
-  margin-bottom: 6px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-}
-
-.quote-form input,
-.quote-form textarea {
+.quote-form-wrap iframe {
   width: 100%;
-  padding: 12px 14px;
-  font-family: var(--font);
-  font-size: 1rem;
-  color: var(--text-light);
-  background: #232323;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 3px;
-  transition: border-color 0.2s ease;
-}
-.quote-form input:focus,
-.quote-form textarea:focus {
-  outline: none;
-  border-color: var(--green-bright);
-}
-
-.form-status {
-  margin-top: 14px;
-  font-weight: 500;
-  color: var(--green-bright);
-  min-height: 1.4em;
+  border: none;
+  min-height: 503px; /* matches the iframe's default height attr while Tally loads */
 }
 
 .contact-info > p { margin-bottom: 18px; }

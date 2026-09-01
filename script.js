@@ -170,14 +170,4 @@
 
   goTo(0);
   restartTimer();
-
-  /* ---------- Placeholder quote form (Tally embed replaces this) ---------- */
-  var form = document.querySelector(".quote-form");
-  var formStatus = form.querySelector(".form-status");
-
-  form.addEventListener("submit", function (event) {
-    event.preventDefault(); // placeholder only — no data is sent anywhere
-    form.reset();
-    formStatus.textContent = "Thanks — we'll be in touch!";
-  });
 })();

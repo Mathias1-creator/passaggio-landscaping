@@ -267,31 +267,11 @@
         </div>
 
         <div class="contact-grid">
-          <!-- TODO: Replace this placeholder form with the Tally embed before launch -->
-          <form class="quote-form reveal">
-            <div class="field">
-              <label for="q-name">Name</label>
-              <input id="q-name" name="name" type="text" autocomplete="name" required>
-            </div>
-            <div class="field">
-              <label for="q-email">Email</label>
-              <input id="q-email" name="email" type="email" autocomplete="email" required>
-            </div>
-            <div class="field">
-              <label for="q-phone">Phone</label>
-              <input id="q-phone" name="phone" type="tel" autocomplete="tel">
-            </div>
-            <div class="field">
-              <label for="q-address">Property Address / City</label>
-              <input id="q-address" name="address" type="text" autocomplete="street-address">
-            </div>
-            <div class="field">
-              <label for="q-message">Message</label>
-              <textarea id="q-message" name="message" rows="4"></textarea>
-            </div>
-            <button class="btn btn-solid" type="submit">Request a Quote</button>
-            <p class="form-status" role="status" aria-live="polite"></p>
-          </form>
+          <div class="quote-form-wrap reveal">
+            <iframe data-tally-src="https://tally.so/embed/zx60ka?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                    loading="lazy" width="100%" height="503" frameborder="0" marginheight="0" marginwidth="0"
+                    title="Request a Quote"></iframe>
+          </div>
 
           <div class="contact-info reveal">
             <p class="contact-phone">
@@ -354,6 +334,15 @@
     <a class="text-btn" href="sms:+18056213938">Text Us</a>
   </div>
 
+  <!-- Tally embed loader (resizes the quote-form iframe) -->
+  <script>
+    (function (d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.src = "https://tally.so/widgets/embed.js";
+      v.onload = v.onerror = function () { if (typeof Tally !== "undefined") Tally.loadEmbeds(); };
+      s.parentNode.insertBefore(v, s);
+    })(document, "script");
+  </script>
   <script src="script.js" defer></script>
 </body>
 </html>
